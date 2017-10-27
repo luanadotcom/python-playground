@@ -8,5 +8,12 @@
 # tip
 # total
 
-print "Enter the tip rate: ";
-read tipRate
+tipRate = input("Enter the tip rate: ");
+billAmount = input("Enter the bill amount: ");
+
+tip = str(((tipRate / 100) * billAmount));
+total = str((tip + billAmount));
+
+print ("The tip amount is " + tip);
+print ("The total amount is " + total);
+
