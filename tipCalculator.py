@@ -14,6 +14,5 @@ billAmount = input("Enter the bill amount: ");
 tip = ((tipRate / 100.00) * billAmount);
 total = (tip + billAmount);
 
-print ("The tip amount is " + tip);
-print ("The total amount is " + total);
-
+print ("The tip amount is " + str(tip));
+print ("The total amount is " + str(total));
