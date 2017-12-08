@@ -9,7 +9,7 @@
 # total
 import numbers
 
-tipRate = raw_input("Enter the tip rate: ");
+tipRate = float(raw_input("Enter the tip rate: "));
 while not isinstance(tipRate, int):
     tipRate = input("Please only enter numbers as the tip rate: ");
 
