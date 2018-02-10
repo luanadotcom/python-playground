@@ -9,16 +9,22 @@
 # total
 import numbers
 
-tipRate = float(raw_input("Enter the tip rate: "));
-while not isinstance(tipRate, int):
-    tipRate = input("Please only enter numbers as the tip rate: ");
+def billValues ():
+    tipRate = int(raw_input("Enter the tip rate: "))
+    billAmount = int(raw_input("Enter the bill amount: "))
+    return(tipRate, billAmount)
 
-billAmount = raw_input("Enter the bill amount: ");
-while not isinstance(billAmount, float) or isinstance(billAmount, int):
-    billAmount = input("Please only enter number as the bill amount: ")
+def calculateValues (tipRate, billAmount):
+    tip = ((tipRate / 100.00) * billAmount)
+    total = (tip + billAmount)
+    return(tip,billAmount)
 
-tip = ((tipRate / 100.00) * billAmount);
-total = (tip + billAmount);
-
-print ("The tip amount is " + str(tip));
-print ("The total amount is " + str(total));
+while True:
+    tipRate, billAmount = billValues()
+    if isinstance(tipRate, int) and isinstance(billAmount, int):
+        calculateValues(tipRate, billAmount)
+        print ("The tip amount is %s" % (tip))
+        print ("The total amount is %s" % (total))
+        break
+    else:
+        print("Error: Please only enter numbers as tip rate and bill amount")
