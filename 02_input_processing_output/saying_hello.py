@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # output:
 # What is your name _Luana_
@@ -8,5 +8,13 @@
 
 ## challenges
 # write a new version of the program without using variables
-# write a version of the program that displays different greetings for different people... 
+# write a version of the program that displays different greetings for different people...
+
+def gather_info():
+    name = raw_input("What is your name? ")
+    return(name)
+
+def output():
+    print("Hello, %s, nice to meet you" % (name))
+
 
