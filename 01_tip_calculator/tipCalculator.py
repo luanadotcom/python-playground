@@ -10,14 +10,14 @@
 import numbers
 
 def billValues ():
-    tipRate = int(raw_input("Enter the tip rate: "))
-    billAmount = int(raw_input("Enter the bill amount: "))
+    tipRate = int(input("Enter the tip rate: "))
+    billAmount = int(input("Enter the bill amount: "))
     return(tipRate, billAmount)
 
 def calculateValues (tipRate, billAmount):
     tip = ((tipRate / 100.00) * billAmount)
     total = (tip + billAmount)
-    return(tip,billAmount)
+    return(tip,total)
 
 while True:
     tipRate, billAmount = billValues()
